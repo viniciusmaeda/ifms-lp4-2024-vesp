@@ -14,7 +14,11 @@ const server = http.createServer((req, res) => {
   const q = url.parse(req.url, true).query; // manipular a url extraindo os parâmetros
 
   // let parametros = 'Parâmetro 1: ' + q.p1;
-  let parametros = `Parâmetro 1: ${q.p1}`;
+  let parametros = `
+    Nome: ${q.nome}
+    Sobrenome: ${q.sobrenome}
+    Email: ${q.email}
+  `;
   
 
   // mensagem que irá aparecer no corpo da página (<body>)

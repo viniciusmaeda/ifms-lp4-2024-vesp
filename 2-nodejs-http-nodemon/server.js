@@ -10,7 +10,11 @@ let port = 3000;
 const server = http.createServer((requisicao, resposta) => {
   resposta.statusCode = 200;
   resposta.setHeader('Content-Type', 'text/plain; charset=utf-8');
-  resposta.write('Olá, este é o servidor HTTP e está rodando localmente.\nTeste de pular linha.\nOutra linha do meu servidor.');
+  resposta.write(`
+    Olá, este é o servidor HTTP e está rodando localmente.\n
+    Teste de pular linha.\n
+    Outra linha do meu servidor.`
+  );
   resposta.end();
 });
 
