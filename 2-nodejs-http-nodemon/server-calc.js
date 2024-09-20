@@ -22,7 +22,10 @@ const server = http.createServer((req, res) => {
   let n1 = Number(q.n1);
   let n2 = Number(q.n2);
   let resposta = `
-    A <u>soma</u> de ${n1} + ${n2} é igual a <b>${n1 + n2}</b>.
+    A <u>soma</u> de ${n1} + ${n2} é igual a <b>${n1 + n2}</b>.<br>
+    A <u>subtração</u> de ${n1} - ${n2} é igual a <b>${n1 - n2}</b>.<br>
+    A <u>divisão</u> de ${n1} / ${n2} é igual a <b>${n1 / n2}</b>.<br>
+    A <u>multiplicação</u> de ${n1} * ${n2} é igual a <b>${n1 * n2}</b>.
   `;
 
   // mensagem que irá aparecer no corpo da página (<body>)
