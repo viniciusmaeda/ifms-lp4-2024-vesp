@@ -1,5 +1,4 @@
 // importar o pacote http
-const { renameSync } = require('fs');
 const http = require('http');
 
 // definição dos meios de acesso ao servidor
@@ -10,6 +9,7 @@ let port = 3000;
 const server = http.createServer((requisicao, resposta) => {
   resposta.statusCode = 200;
   resposta.setHeader('Content-Type', 'text/plain; charset=utf-8');
+  
   resposta.write(`
     Olá, este é o servidor HTTP e está rodando localmente.\n
     Teste de pular linha.\n
