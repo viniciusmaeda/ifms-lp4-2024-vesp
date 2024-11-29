@@ -8,26 +8,51 @@ const rotas = express.Router();
 // GET
 // rota para acesar o método GET para veículo
 rotas.get('/', (req, res) => {
-  res.send('Você acessou a rota veículo.')
+  res.status(200).send({
+    mensagem: 'Você acessou a rota raiz de veículo.'
+  });
 })
 
 
 // POST
 // rota para acesar o método POST para veículo
-rotas.post('/cadastro', (req, res) => {
-  res.send('Você está na rota para o cadastro de um novo veículo.');
-  // implementação para cadastrar um novo estudante
+rotas.post('/', (req, res) => {
+
+  // implementar código para salvar os recebidos no banco de dados
+
+
+  // indica que o dado foi criado com sucesso
+  res.status(201).send({
+    mensagem: 'Veículo cadastrado com sucesso.'
+  });
 });
 
 
 // PUT
 // rota para acesar o método PUT para veículo
-rotas.put('/atualizacao', (req, res) => {
-  res.send('Você está na rota para a atualização dos dados de um veículo.');
+rotas.put('/', (req, res) => {
+  
+  // implementação do código para atualizar o veículo no banco
+
+
+  res.status(200).send({
+    mensagem: 'Veículo atualizado com sucesso.'
+  });
 });
 
 
 // DELETE
+// rota para excluir um veículo
+rotas.delete('/', (req, res) => {
+
+  // implementação de código que irá excluir do banco
+
+
+  res.status(202).send({
+    mensagem: 'Veículo excluído com sucesso.'
+  });
+
+});
 
 
 

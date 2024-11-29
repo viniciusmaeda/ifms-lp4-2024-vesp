@@ -16,17 +16,15 @@ const app = express();
 // importar as configurações de rotas
 const veiculosRotas = require('./routes/Veiculos');
 
-
-
 // rota raiz do servidor
 app.get('/', (req, res) => {
-  res.send('Você acessou a raiz do servidor web.');
+  res.status(200).send({
+    mensagem: 'Você acessou a raiz do servidor web.'
+  });
 });
-
 
 // configurar as rotas para veiculo
 app.use('/veiculo', veiculosRotas);
-
 
 // rodar o servidor
 // executar o servidor
