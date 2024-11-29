@@ -18,12 +18,21 @@ rotas.get('/', (req, res) => {
 // rota para acesar o método POST para cliente
 rotas.post('/', (req, res) => {
 
+  // obter os dados do corpo da requisição
+  const novoCliente = {
+    nome: req.body.nome,
+    email: req.body.email,
+    telefone: req.body.telefone,
+    senha: req.body.senha
+  }
+
   // implementar código para salvar os recebidos no banco de dados
 
 
   // indica que o dado foi criado com sucesso
   res.status(201).send({
-    mensagem: 'Cliente cadastrado com sucesso.'
+    mensagem: 'Cliente cadastrado com sucesso.',
+    novoCliente: novoCliente
   });
 });
 

@@ -13,6 +13,19 @@ rotas.get('/', (req, res) => {
   });
 })
 
+// GET
+// rota para acesar o método GET para consultar um veículo
+// a partir do ID, enviado pelo url
+rotas.get('/:idVeiculo', (req, res) => {
+
+  // obter o id enviado pela url
+  const idVeiculo = req.params.idVeiculo;
+
+  res.status(200).send({
+    mensagem: `Id recebido pelo servidor: ${idVeiculo}`
+  });
+})
+
 
 // POST
 // rota para acesar o método POST para veículo
